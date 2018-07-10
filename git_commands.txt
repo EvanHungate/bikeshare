@@ -1,0 +1,5 @@
+git add -A
+git commit -m "Updated"
+git push origin master
+
+THAT'S IT

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/jquery.auto-complete.css" rel="stylesheet">
+    <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="css/animate.css">
+    <!--Let browser know website is optimized for mobile hi mel-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+  
+<body onload="loadList()">
+    <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  
+<nav>
+  <div class="nav-wrapper green darken-2">
+    <a href="#!" class="brand-logo left"><b>BikeShare</b></a>
+    <ul class="right">
+      <li><a href="page.html">Station Stats</a></li>
+      <li><a href="page.html">About</a></li>
+      <li><a href="page.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="input-field col s12 m12">
+        <input id="station" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('checkButton').click()">
+        <label for="station">Station Location</label>
+      </div>
+    </div>
+  </div>
+  <div class="section center-align">
+    <a id="checkButton" class='button btn-large col s6 light-blue darken-2' href='#' onclick=getStatus()>Get Status</a>
+    <h4>Station Name:</h4><p id='name'></p><br>
+    <h4>Station Bikes:</h4><p id='bikes'></p><br>
+    <h4>Station Docks:</h4><p id='docks'></p><br>
+  </div>
+</div>
+<!--Import different version of jquery-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--Autocomplete for the station dropdown list-->
+<script src="js/jquery.auto-complete.js"></script>
+<!--Additional JS, like for XML reading etc.-->
+<script src="js/custom.js"></script>
+
+</body>
+</html>
